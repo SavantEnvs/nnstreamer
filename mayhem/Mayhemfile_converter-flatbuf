@@ -1,0 +1,9 @@
+project: savantenvs/nnstreamer
+target: converter-flatbuf
+cmds:
+  - cmd: /mayhem/mayhem/fuzz_converter_flatbuf
+    libfuzzer: true
+    timeout: 10
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/converter-flatbuf/testsuite

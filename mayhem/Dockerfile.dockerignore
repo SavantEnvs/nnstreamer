@@ -1,0 +1,10 @@
+# Build context for mayhem/Dockerfile: the full repo incl. .git; only local build output is dropped.
+build/
+mayhem/build-fuzz/
+mayhem/build-test/
+mayhem/fuzz_*
+!mayhem/harnesses/
+*.o
+**/__pycache__/
+.DS_Store
+*.swp

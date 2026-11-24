@@ -1,0 +1,9 @@
+project: savantenvs/nnstreamer
+target: sparse-dec
+cmds:
+  - cmd: /mayhem/mayhem/fuzz_sparse_dec
+    libfuzzer: true
+    timeout: 10
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sparse-dec/testsuite
